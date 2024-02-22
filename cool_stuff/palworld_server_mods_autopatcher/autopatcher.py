@@ -17,6 +17,12 @@ login_data = {
 print(session.post(login_url, data=login_data))
 pprint.pprint(session)
 
+# now i need to know the version of the installed mod and then i check for the version on the modding page.
+# when version on modding page is higher, download the new files and place them on the server
+# also making a backup before manipulating the servers files
+# i need a text file, with the url for the mod and the installed version on the server
+# when the patcher downloads a newer version, the textfile is being edited by this script to change the version number
+
 # Get mod information
 mod_url = 'https://www.nexusmods.com/mods'
 response = session.get(mod_url)
